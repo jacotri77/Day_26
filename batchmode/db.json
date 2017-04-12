@@ -1,0 +1,37 @@
+{
+	"users": [{
+		"id": 1,
+		"name": "brett",
+		"recipeId":1,
+}
+],
+
+"ingredients": [{
+	"id": 1,
+	"name": "the damn flour",
+
+}],
+"recipes":[
+{
+	"id": 1,
+	"name": "browines",
+	"userId": 1,
+	"stepId":1,
+	"ingredientId":1,
+
+},
+{	
+	"id":2,
+	"name": "cake",
+	"userId": 1,
+	"stepId":11,
+	"ingredientId": 1,
+}
+],
+	"steps":[
+	{
+	"id":1,
+	"description":"use the damn flour",
+}
+]
+}
