@@ -1,26 +1,116 @@
 {
   "users": [
     {
-      "user": "erik",
-      "id": 1
+      "user": "",
+      "id": 13
+    },
+    {
+      "user": "",
+      "id": 14
+    },
+    {
+      "user": "",
+      "id": 15
+    },
+    {
+      "user": "",
+      "id": 16
     }
   ],
   "recipes": [
     {
-      "recipe": "menegitis",
-      "id": 1
+      "recipe": "",
+      "userId": 2,
+      "prepTime": "",
+      "cookTime": "",
+      "cookTemp": "",
+      "ForC": "",
+      "servingAmount": "",
+      "servingType": "",
+      "id": 26
+    },
+    {
+      "recipe": "",
+      "userId": 3,
+      "prepTime": "",
+      "cookTime": "",
+      "cookTemp": "",
+      "ForC": "",
+      "servingAmount": "",
+      "servingType": "",
+      "id": 27
+    },
+    {
+      "recipe": "",
+      "userId": 1,
+      "prepTime": "",
+      "cookTime": "",
+      "cookTemp": "",
+      "ForC": "",
+      "servingAmount": "",
+      "servingType": "",
+      "id": 28
+    },
+    {
+      "recipe": "",
+      "userId": 1,
+      "prepTime": "",
+      "cookTime": "",
+      "cookTemp": "",
+      "ForC": "",
+      "servingAmount": "",
+      "servingType": "",
+      "id": 29
     }
   ],
   "steps": [
     {
-      "step": "bake the bread",
-      "id": 1
+      "step": "bob",
+      "ingredientId": 1,
+      "id": 10,
+      "directions": ""
+    },
+    {
+      "step": "",
+      "ingredientId": 2,
+      "id": 15
+    },
+    {
+      "step": "",
+      "ingredientId": 3,
+      "id": 16
+    },
+    {
+      "step": "",
+      "ingredientId": 1,
+      "id": 17
+    },
+    {
+      "step": "",
+      "ingredientId": 1,
+      "id": 18
     }
   ],
   "ingredients": [
     {
-      "ingredient": "flour",
-      "id": 1
+      "ingredient": "",
+      "stepId": 2,
+      "id": 26
+    },
+    {
+      "ingredient": "",
+      "stepId": 3,
+      "id": 27
+    },
+    {
+      "ingredient": "",
+      "stepId": 1,
+      "id": 28
+    },
+    {
+      "ingredient": "",
+      "stepId": 1,
+      "id": 29
     }
   ]
 }
