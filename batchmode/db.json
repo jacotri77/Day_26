@@ -1,37 +1,26 @@
 {
-	"users": [{
-		"id": 1,
-		"name": "brett",
-		"recipeId":1,
-}
-],
-
-"ingredients": [{
-	"id": 1,
-	"name": "the damn flour",
-
-}],
-"recipes":[
-{
-	"id": 1,
-	"name": "browines",
-	"userId": 1,
-	"stepId":1,
-	"ingredientId":1,
-
-},
-{	
-	"id":2,
-	"name": "cake",
-	"userId": 1,
-	"stepId":11,
-	"ingredientId": 1,
-}
-],
-	"steps":[
-	{
-	"id":1,
-	"description":"use the damn flour",
-}
-]
+  "users": [
+    {
+      "user": "erik",
+      "id": 1
+    }
+  ],
+  "recipes": [
+    {
+      "recipe": "menegitis",
+      "id": 1
+    }
+  ],
+  "steps": [
+    {
+      "step": "bake the bread",
+      "id": 1
+    }
+  ],
+  "ingredients": [
+    {
+      "ingredient": "flour",
+      "id": 1
+    }
+  ]
 }
