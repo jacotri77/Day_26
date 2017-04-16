@@ -1,116 +1,56 @@
 {
   "users": [
     {
-      "user": "",
-      "id": 13
-    },
-    {
-      "user": "",
-      "id": 14
-    },
-    {
-      "user": "",
-      "id": 15
-    },
-    {
-      "user": "",
-      "id": 16
+      "user": "Brett",
+      "id": 1
     }
   ],
   "recipes": [
     {
-      "recipe": "",
-      "userId": 2,
-      "prepTime": "",
-      "cookTime": "",
-      "cookTemp": "",
-      "ForC": "",
-      "servingAmount": "",
-      "servingType": "",
-      "id": 26
-    },
-    {
-      "recipe": "",
-      "userId": 3,
-      "prepTime": "",
-      "cookTime": "",
-      "cookTemp": "",
-      "ForC": "",
-      "servingAmount": "",
-      "servingType": "",
-      "id": 27
-    },
-    {
-      "recipe": "",
-      "userId": 1,
-      "prepTime": "",
-      "cookTime": "",
-      "cookTemp": "",
-      "ForC": "",
-      "servingAmount": "",
-      "servingType": "",
-      "id": 28
-    },
-    {
-      "recipe": "",
-      "userId": 1,
-      "prepTime": "",
-      "cookTime": "",
-      "cookTemp": "",
-      "ForC": "",
-      "servingAmount": "",
-      "servingType": "",
-      "id": 29
+      "recipe": "weed",
+      "prepTime": "15 mins",
+      "cookTime": "45mins",
+      "cookTemp": "F",
+      "ForC": "12",
+      "servingAmount": "chronic",
+      "id": 1
     }
   ],
   "steps": [
     {
-      "step": "bob",
-      "ingredientId": 1,
-      "id": 10,
-      "directions": ""
+      "recipeId": 1,
+      "id": 1
     },
     {
-      "step": "",
-      "ingredientId": 2,
-      "id": 15
+      "recipeId": 1,
+      "id": 2
     },
     {
-      "step": "",
-      "ingredientId": 3,
-      "id": 16
-    },
-    {
-      "step": "",
-      "ingredientId": 1,
-      "id": 17
-    },
-    {
-      "step": "",
-      "ingredientId": 1,
-      "id": 18
+      "recipeId": 1,
+      "id": 3
     }
   ],
   "ingredients": [
     {
-      "ingredient": "",
-      "stepId": 2,
-      "id": 26
-    },
-    {
-      "ingredient": "",
-      "stepId": 3,
-      "id": 27
-    },
-    {
-      "ingredient": "",
+      "ingredients": "weed",
       "stepId": 1,
-      "id": 28
+      "amount": "3",
+      "unit": "cups",
+      "id": 1
     },
     {
-      "ingredient": "",
+      "ingredients": "paper",
       "stepId": 1,
-      "id": 29
+      "amount": "5",
+      "unit": "ounces",
+      "id": 2
+    },
+    {
+      "ingredients": "oil",
+      "stepId": 1,
+      "amount": "6",
+      "unit": "lbs",
+      "id": 3
     }
   ]
 }

@@ -1,108 +1,21 @@
 {
   "users": [
-    {
-      "id": 1,
-      "name": "brett"
-    },
-    {
-      "id": 2,
-      "name": "erik"
-    },
-    {
-      "user": "brett hand",
-      "id": 3
-    },
-    {
-      "user": "Bretts evil sister",
-      "id": 4
-    },
-    {
-      "user": "george",
-      "id": 5
-    }
+    
   ],
   "recipes": [
-    {
-      "id": 1,
-      "name": "browines",
-      "by": "chef name",
-      "type": "breakfast",
-      "prepTime": "15 mins",
-      "cookTime": "35 mins",
-      "cookTemp": 350,
-      "ForC": "F",
-      "servingAmount": "",
-      "servingType": "",
-      "photo": "",
-      "userId": 1,
-      "stepId": 1
-    },
-    {
-      "id": 2,
-      "name": "cake",
-      "type": "baking",
-      "prepTime": "15 mins",
-      "cookTime": "45 mins",
-      "cookTemp": 325,
-      "ForC": "F",
-      "userId": 2,
-      "stepId": 1
-    },
-    {
-      "recipe": "",
-      "id": 3
-    },
-    {
-      "recipe": "",
-      "id": 4
-    },
-    {
-      "recipe": "eriks nuts",
-      "id": 5
-    },
-    {
-      "recipe": "Bretts boobies",
-      "id": 6
-    },
-    {
-      "recipe": "Brownies of Death",
-      "id": 7
-    },
-    {
-      "recipe": "eriks hats",
-      "id": 8
-    }
+    
   ],
   "steps": [
-    {
-      "id": 1,
-      "recipeId": 1,
-      "directions": ""
-    },
-    {
-      "step": "",
-      "id": 2
-    },
-    {
-      "step": "37",
-      "id": 3
-    }
+    
   ],
   "ingredients": [
-    {
-      "id": 1,
-      "stepId": 1,
-      "amount": 2,
-      "unit": "cups",
-      "ingredient": "bread flour"
-    },
-    {
-      "ingredient": "",
-      "id": 2
-    },
-    {
-      "ingredient": "waffle fries",
-      "id": 3
-    }
+    
   ]
 }
+
+
+//  <input type="text" placeholder='amount' id="amountInput"/>
+      //  <input type="text" placeholder='unit' id="unitInput"/>
+      //  <input type="text" placeholder='ingredient' id="ingredientInput"/>
+      //  <button type="button" id="btn1">+</button>
+      //  <button type="submit" id="ingredientSubmit">Just push this shit into the steps</

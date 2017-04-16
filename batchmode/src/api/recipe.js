@@ -18,38 +18,36 @@ export function postRecipe(recipe, userId, prepTime, cookTime, cookTemp, ForC, s
 		})
 })
 }
-export function postUsers(user, userId) {
-	axios.post('http://localhost:3001/users',{user, userId}).then(user=>{
+export function postUsers(user) {
+	axios.post('http://localhost:3001/users',{user}).then(user=>{
 		store.dispatch({
 			type: 'POST_USERS',
-			user: user.data
+			user: user.data,
+			
 		})
 	})
 }
-export function postSteps(step, ingredientId) {
-	axios.post('http://localhost:3001/steps',{step, ingredientId}).then(step=>{
+export function postSteps(recipeId, directions) {
+	axios.post('http://localhost:3001/steps',{recipeId}).then(step=>{
+		console.log(step)
 		store.dispatch({
 			type: 'POST_STEPS',
-			step: step.data,
-			ingredientId: step.ingredient
+			recipeId: step.data.recipeId,
+			directions: step.data.directions
+			
+			
 		})
 	})
 }
-export function postIngredients(ingredient,stepId) {
-	axios.post('http://localhost:3001/ingredients',{ingredient, stepId}).then(ingredient=>{
+export function postIngredients(stepId, ingredients, amount, unit) {
+	axios.post('http://localhost:3001/ingredients',{ingredients, stepId, amount, unit}).then(ingredient=>{
+		console.log(ingredient)
 		store.dispatch({
 			type: 'POST_INGREDIENTS',
-			ingredient: ingredient.data,
-			stepId: ingredient.step
+			ingredient: ingredient.data.ingredients,
+			stepId: ingredient.data.stepId,
+			unit: ingredient.data.unit,
+			amount: ingredient.data.amount
 		})
-	})
-}
-export function patchDirections( directions){
-	axios.patch('http://localhost:3001/steps/10', {directions}).then(step=>{
-		store.dispatch({
-			type: 'PATCH_DIRECTIONS',
-			directions: step.data
-		})
-
 	})
 }
