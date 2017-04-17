@@ -73,19 +73,28 @@ pushSteps(e){
 
 render(){
 	return(
-		<div>
+		<div id="fullContainer">
+		<div id="leftMenu">
+			<ul>
+				<li>My Recipes</li>
+				<li>Public Recipes</li>
+				<li>Popular Recipes</li>
+				<li>My Favorite Recipes</li>
+				<li>My Pantry</li>
+			</ul>
+		</div>
+		<div id="formContainter">
 		<div>
 			<form onSubmit={this.handleSubmit}>
 				<input type="text" id={this.state.id} onChange={this.handleChange} placeholder="Recipe Name" name="recipe" value={this.state.recipe} />
 				<input type="text" id={this.state.id} onChange={this.handleChange} placeholder="By" name="user" value={this.state.user} />
-				
 				<input type="text" id={this.state.id} onChange={this.handleChange} placeholder="Prep Time" name="prepTime" value={this.state.prepTime} />
 				<input type="text" id={this.state.id} onChange={this.handleChange} placeholder="Cook Time" name="cookTime" value={this.state.cookTime} />
 				<input type="text" id={this.state.id} onChange={this.handleChange} placeholder="Cook Temp" name="cookTemp" value={this.state.cookTemp} />
 				<input type="text" id={this.state.id} onChange={this.handleChange} placeholder="Degrees F or C" name="ForC" value={this.state.ForC} />
 				<input type="text" id={this.state.id} onChange={this.handleChange} placeholder="Serving Amount" name="servingAmount" value={this.state.servingAmount} />
 				<input type="text" id={this.state.id} onChange={this.handleChange} placeholder="Serving Type" name="servingType" value={this.state.servingType} />
-				<button type="submit">Submit</button>
+				<button type="submit">Save this Recipe!</button>
 			</form>
 			</div>
 			<br/>
@@ -103,10 +112,12 @@ render(){
 		             <input type="textarea" name="directions" value={this.state.directions} onChange={this.handleChange} placeholder="Directions" id={this.state.id} />
 		         </div>)}
 		     	 <button onClick={ () => this.appendInput() }>+</button>
-		     <button type="submit">You better push shit up</button>
+		     <button type="submit">Add Another Step</button>
      	</form>
-     	</div>
      </div>
+    </div>
+    </div>
+
     
 	)
 }

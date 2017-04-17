@@ -1,5 +1,45 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+#headerMenu{
+  border:1px solid black;
+  height:50px;
+  width:100%;
+}
+
+#formContainter{
+  display: block;
+  float: right;
+  width: 70%;
+  height: 1400px;
+  border:1px solid black;
+
+  
+}
+#leftMenu{
+  height:1400px;
+	width:10%;
+	float: left;
+	display: inline-block;
+	text-align: left;
+	list-style: none;
+	border:1px solid black;
+
+}
+
+#leftMenu li{
+  list-style: none;
+  border-bottom: 1px solid black;
+  margin:20px;
+  text-align: center;
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+
+#leftMenu ul{
+  padding-left: 0px;
 }
