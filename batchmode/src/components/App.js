@@ -1,5 +1,5 @@
 import React from 'react';
-import AddRecipe from '../components/addRecipe'
+import NewRecipe from '../components/newRecipe'
 import Header from '../components/header'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import {BrowserRouter as Router} from 'react-router-dom'
@@ -14,7 +14,7 @@ export default React.createClass({
         <Router>
         	<div>
         	<Header />
-          <AddRecipe />
+          <NewRecipe />
           </div>
         </Router>
       </MuiThemeProvider>

@@ -3,6 +3,10 @@
     {
       "user": "Brett",
       "id": 1
+    },
+    {
+      "user": "Erik",
+      "id": 2
     }
   ],
   "recipes": [
@@ -14,6 +18,15 @@
       "ForC": "12",
       "servingAmount": "chronic",
       "id": 1
+    },
+    {
+      "recipe": "Weed Brownies",
+      "prepTime": "15 mins",
+      "cookTime": "45 mins",
+      "cookTemp": "F",
+      "ForC": "12",
+      "servingAmount": "Fucking Chronic",
+      "id": 2
     }
   ],
   "steps": [
@@ -28,6 +41,18 @@
     {
       "recipeId": 1,
       "id": 3
+    },
+    {
+      "recipeId": 1,
+      "id": 4
+    },
+    {
+      "recipeId": 1,
+      "id": 5
+    },
+    {
+      "recipeId": 1,
+      "id": 6
     }
   ],
   "ingredients": [
@@ -51,6 +76,27 @@
       "amount": "6",
       "unit": "lbs",
       "id": 3
+    },
+    {
+      "ingredients": "weed",
+      "stepId": 1,
+      "amount": "3",
+      "unit": "cups",
+      "id": 4
+    },
+    {
+      "ingredients": "paper",
+      "stepId": 1,
+      "amount": "4",
+      "unit": "ounces",
+      "id": 5
+    },
+    {
+      "ingredients": "stick icky",
+      "stepId": 1,
+      "amount": "1",
+      "unit": "lb",
+      "id": 6
     }
   ]
 }
