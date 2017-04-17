@@ -14,6 +14,7 @@ return(
 				<li>My Pantry</li>
 			</ul>
 		</div>
+	</div>
 )
 
 }

@@ -10,6 +10,7 @@ export default React.createClass({
 		ingredients:[],
 		directions: '',
 		id:1,
+		stepId:1,
 		prepTime: "",
     cookTime: "",
     cookTemp: '',
@@ -20,6 +21,8 @@ export default React.createClass({
     inputs: ['inputs-0'],
     amount: '',
     unit:'',
+    
+  
 }
 },
 
@@ -31,7 +34,7 @@ export default React.createClass({
 			recipe:'',
 			user:'',
 			step:this.state.steps,
-			ingredients:this.state.ingredients,
+			stepId:1,
 			id: this.state.id + 1,
 		  prepTime: "",
       cookTime: "",
@@ -41,8 +44,11 @@ export default React.createClass({
       servingType: "",
       photo: "",
       directions: '',
-      amount: '',
-      unit:'',
+     	inputs: ['inputs-0'],
+    	 amount: '',
+    	 unit:'',
+    	 ingredients:this.state.ingredients,
+
 
 		})
 
@@ -52,17 +58,18 @@ export default React.createClass({
 		[e.target.name]: e.target.value
 		})
 	},
-	appendInput() {
+	appendInput(e) {
     var newInput = `input-${this.state.inputs.length}`
     this.setState({ inputs: this.state.inputs.concat([newInput]) })
 
 },
 pushSteps(e){
 	e.preventDefault()
-	postIngredients(this.state.id,this.state.ingredients, this.state.amount, this.state.unit)
-	postSteps(this.state.id, this.state.directions)
+	postIngredients(this.state.ingredients,this.state.id, this.state.amount, this.state.unit, this.state.stepId)
+	postSteps(this.state.id, this.state.directions, this.state.stepId)
 	this.setState({
 			step:[],
+			stepId:this.state.id + 1,
 			ingredients:[],
 			directions: '',
       amount: '',
@@ -111,7 +118,7 @@ render(){
 		             	</div>
 		             <input type="textarea" name="directions" value={this.state.directions} onChange={this.handleChange} placeholder="Directions" id={this.state.id} />
 		         </div>)}
-		     	 <button onClick={ () => this.appendInput() }>+</button>
+		     	 <button type="button" onClick={ () => this.appendInput() }>+</button>
 		     <button type="submit">Add Another Step</button>
      	</form>
      </div>

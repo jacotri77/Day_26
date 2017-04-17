@@ -4,6 +4,7 @@ const initialState = {
 	ingredients:[],
 	user:[],
 	id:'',
+	stepId:'',
 	prepTime: '',
     cookTime: '',
     cookTemp: '',
@@ -14,14 +15,15 @@ const initialState = {
     photo: '',
     amount:'',
     unit:'',
-    inputs:['inputs-0']
+    inputs:['inputs-0'],
+    recipeType: '',
 }
 
 
 export default function(state=initialState, action) {
 	switch (action.type) {
 		case 'POST_RECIPE': 
-			return {...state,  recipe: {...action.recipe}, id:{...action.id},prepTime: {...action.prepTime}, cookTemp:{...action.cookTemp}, cookTime: {...action.cookTime}, ForC: {...action.ForC}, servingAmount: {...action.servingAmount}, servingType: {...action.servingType}, photo: {...action.photo} }
+			return {...state,  recipe: {...action.recipe}, id:{...action.id},prepTime: {...action.prepTime}, cookTemp:{...action.cookTemp}, cookTime: {...action.cookTime}, deg: {...action.deg}, servingAmount: {...action.servingAmount}, servingType: {...action.servingType}, photo: {...action.photo}, recipeType: {...action.recipeType} }
 		case 'POST_INGREDIENTS':
 			return {state, ingredients: {...action.ingredients},amount:{...action.amount}, unit: {...action.unit}}
 		case 'POST_USERS':

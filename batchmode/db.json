@@ -1,102 +1,54 @@
 {
   "users": [
     {
-      "user": "Brett",
+      "user": "erik",
       "id": 1
     },
     {
-      "user": "Erik",
+      "user": "",
       "id": 2
     }
   ],
   "recipes": [
     {
-      "recipe": "weed",
-      "prepTime": "15 mins",
-      "cookTime": "45mins",
-      "cookTemp": "F",
-      "ForC": "12",
-      "servingAmount": "chronic",
+      "recipe": "erik",
+      "prepTime": "34",
+      "cookTime": "300",
+      "cookTemp": "500",
+      "servingAmount": "24",
+      "servingType": "After Da Club",
+      "deg": "F",
+      "photo": "",
+      "recipeType": "cookies",
       "id": 1
     },
     {
-      "recipe": "Weed Brownies",
-      "prepTime": "15 mins",
-      "cookTime": "45 mins",
-      "cookTemp": "F",
-      "ForC": "12",
-      "servingAmount": "Fucking Chronic",
+      "recipe": "",
+      "prepTime": "",
+      "cookTime": "",
+      "cookTemp": "",
+      "servingAmount": "",
+      "servingType": "After Da Club",
+      "deg": "F",
+      "photo": "",
+      "recipeType": "",
       "id": 2
     }
   ],
   "steps": [
     {
       "recipeId": 1,
+      "directions": "make the dough",
       "id": 1
-    },
-    {
-      "recipeId": 1,
-      "id": 2
-    },
-    {
-      "recipeId": 1,
-      "id": 3
-    },
-    {
-      "recipeId": 1,
-      "id": 4
-    },
-    {
-      "recipeId": 1,
-      "id": 5
-    },
-    {
-      "recipeId": 1,
-      "id": 6
     }
   ],
   "ingredients": [
     {
-      "ingredients": "weed",
-      "stepId": 1,
-      "amount": "3",
+      "ingredients": 1,
+      "stepId": "mallow",
+      "amount": "4",
       "unit": "cups",
       "id": 1
-    },
-    {
-      "ingredients": "paper",
-      "stepId": 1,
-      "amount": "5",
-      "unit": "ounces",
-      "id": 2
-    },
-    {
-      "ingredients": "oil",
-      "stepId": 1,
-      "amount": "6",
-      "unit": "lbs",
-      "id": 3
-    },
-    {
-      "ingredients": "weed",
-      "stepId": 1,
-      "amount": "3",
-      "unit": "cups",
-      "id": 4
-    },
-    {
-      "ingredients": "paper",
-      "stepId": 1,
-      "amount": "4",
-      "unit": "ounces",
-      "id": 5
-    },
-    {
-      "ingredients": "stick icky",
-      "stepId": 1,
-      "amount": "1",
-      "unit": "lb",
-      "id": 6
     }
   ]
 }

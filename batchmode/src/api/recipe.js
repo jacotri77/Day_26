@@ -1,8 +1,8 @@
 import axios from 'axios'
 import store from '../store'
 
-export function postRecipe(recipe, userId, prepTime, cookTime, cookTemp, ForC, servingAmount, servingType, photo ) {
-	axios.post('http://localhost:3001/recipes',{recipe, userId, prepTime, cookTime, cookTemp, ForC, servingAmount, servingType, photo }).then(recipe=>{
+export function postRecipe(recipe, userId, prepTime, cookTime, cookTemp, servingAmount, servingType, deg, photo, recipeType ) {
+	axios.post('http://localhost:3001/recipes',{recipe, userId, prepTime, cookTime, cookTemp, servingAmount, servingType,deg, photo, recipeType }).then(recipe=>{
 		console.log(recipe)
 		store.dispatch({
 			type: 'POST_RECIPE',
@@ -11,10 +11,13 @@ export function postRecipe(recipe, userId, prepTime, cookTime, cookTemp, ForC, s
 			prepTime: recipe.prepTime,
 		    cookTime: recipe.cookTime,
 		    cookTemp: recipe.cookTemp,
-		    ForC: recipe.ForC,
+		    deg: recipe.deg,
 		    servingAmount: recipe.servingAmount,
 		    servingType: recipe.servingType,
-		    photo: recipe.photo
+		    photo: recipe.photo,
+		    recipeType: recipe.recipeType,
+
+
 		})
 })
 }
@@ -27,19 +30,20 @@ export function postUsers(user) {
 		})
 	})
 }
-export function postSteps(recipeId, directions) {
-	axios.post('http://localhost:3001/steps',{recipeId}).then(step=>{
+export function postSteps(recipeId, directions, stepId) {
+	axios.post('http://localhost:3001/steps',{recipeId, directions, stepId}).then(step=>{
 		console.log(step)
 		store.dispatch({
 			type: 'POST_STEPS',
 			recipeId: step.data.recipeId,
-			directions: step.data.directions
+			directions: step.data.directions,
+			stepId: step.data.stepId,
 			
 			
 		})
 	})
 }
-export function postIngredients(stepId, ingredients, amount, unit) {
+export function postIngredients(ingredients,stepId,  amount, unit) {
 	axios.post('http://localhost:3001/ingredients',{ingredients, stepId, amount, unit}).then(ingredient=>{
 		console.log(ingredient)
 		store.dispatch({
