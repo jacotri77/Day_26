@@ -4,29 +4,49 @@
   "steps": [
     {
       "recipeId": 1,
-      "directions": "mix the ingredients together",
+      "directions": "",
       "id": 1
     },
     {
       "recipeId": 1,
-      "directions": "add it to the top after baking",
+      "directions": "",
       "id": 2
+    },
+    {
+      "recipeId": 1,
+      "directions": "",
+      "id": 3
+    },
+    {
+      "recipeId": 1,
+      "directions": "",
+      "id": 4
     }
   ],
   "ingredients": [
     {
-      "ingredients": 1,
-      "stepId": "choc chips",
-      "amount": "3",
-      "unit": "cups",
+      "ingredients": [],
+      "amount": "",
+      "unit": "",
       "id": 1
     },
     {
-      "ingredients": 1,
-      "stepId": "frosting",
-      "amount": "3",
-      "unit": "lbs",
+      "ingredients": [],
+      "amount": "",
+      "unit": "",
       "id": 2
+    },
+    {
+      "ingredients": "",
+      "amount": "",
+      "unit": "",
+      "id": 3
+    },
+    {
+      "ingredients": "",
+      "amount": "",
+      "unit": "",
+      "id": 4
     }
   ]
 }

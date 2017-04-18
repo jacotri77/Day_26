@@ -1,8 +1,9 @@
 const initialState = {
 	reicpe:[],
 	step: [],
-	ingredients:[],
-	user:[],
+	ingredients:'',
+	user:'',
+	userId:'',
 	id:'',
 	stepId:'',
 	prepTime: '',
@@ -32,7 +33,7 @@ export default function(state=initialState, action) {
 		case 'POST_STEPS':
 			return {state,  step: {...action.step}}
 		case 'GET_PHOTO':
-			return {state, directions: {...action.photo}}
+			return {state, directions: {...action.directions}}
 		default:
 			return state
 	}

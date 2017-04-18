@@ -26,22 +26,22 @@ export default React.createClass({
 }
 },
 
-handleChange(event, index, servingType){
+handleChange(e){
   this.setState({
-    servingType: servingType
+    servingType: e.target.value,
   })
 },
 
-handleDegrees(event, index, deg){
+handleDegrees(e){
  this.setState({
-    deg:deg
+    deg:this.state.deg
   })
 },
 
 handleSubmit(e){
     e.preventDefault()
     postRecipe(this.state.recipe, this.state.userId, this.state.prepTime, this.state.cookTime, this.state.cookTemp, this.state.servingAmount, this.state.servingType,this.state.deg, this.state.photo, this.state.recipeType, this.state.personalNotes)
-    postUsers(this.state.recipeId,this.state.user)
+    postUsers(this.state.user)
     this.setState({
       recipe:'',
       user:'',
@@ -60,10 +60,7 @@ handleSubmit(e){
       personalNotes:'',
 
     })
-
   },
-
-
 Input(e){
   this.setState({
   [e.target.name]: e.target.value
@@ -80,15 +77,14 @@ appendInput() {
     ingredients:[],
 
   })
-
 },
 pushSteps(e){
   e.preventDefault()
-  postIngredients(this.state.id,this.state.ingredients, this.state.amount, this.state.unit)
+  postIngredients(this.state.ingredients,this.state.Id, this.state.amount, this.state.unit)
   postSteps(this.state.id, this.state.directions)
   this.setState({
       step:[],
-      ingredients:[],
+      ingredients:'',
       directions: '',
       amount: '',
       unit:'',
@@ -108,7 +104,7 @@ pushSteps(e){
 render(){
 return(
 	<div id="formContainter">
-    <form id="firstForm">
+    <form id="firstForm" >
       
         <p>Basic Info -------------------------------</p>
         <div id="buttonPlus">
@@ -122,17 +118,17 @@ return(
         </div>
   
 
-    	<select onChange={this.handleChange} name="servingType" id="recipeTypeSelect">
-        <option value={this.state.servingType} name="servingType" >Recipe Type</option>
-        <option value={this.state.servingType} name="servingType" >Breaky</option>
-        <option value={this.state.servingType} name="servingType">Snack</option>
-        <option value={this.state.servingType} name="servingType">After Da Club</option>
-        <option value={this.state.servingType} name="servingType">Munchies</option>
+    	<select onChange={this.handleChange} value={this.state.servingType} name="servingType" id="recipeTypeSelect">
+        <option value="Recipe Type" name="servingType" >Recipe Type</option>
+        <option value="Breaky" name="servingType" >Breaky</option>
+        <option value="Snack"name="servingType">Snack</option>
+        <option value="After Da Club" name="servingType">After Da Club</option>
+        <option value="Munchies" name="servingType">Munchies</option>
       </select>
       <input type="text" onChange={this.Input} id="text-field-default" placeholder="Prep Time" name="prepTime" value={this.state.prepTime} className="textSmall"/>
       <input type="text"onChange={this.Input} id="text-field-default" placeholder="Cook Time" name="cookTime" value={this.state.cookTime} className="textSmall"/>
       <input type="text" onChange={this.Input} id="text-field-default" placeholder="Cook Temp" name="cookTemp" value={this.state.cookTemp} className="textSmall"/>
-      <select value={this.state.deg} name="deg" onChange={this.handleDegrees} id="degreesSelectType">
+      <select name="deg" onChange={this.handleDegrees} id="degreesSelectType">
         <option value={this.state.deg} name="degrees" >F or C</option>
         <option value={this.state.deg} name="degrees" >F</option>
         <option value={this.state.deg} name="degrees" >C</option>
@@ -142,6 +138,7 @@ return(
         <input type="text" onChange={this.Input} id="text-field-default" placeholder="Amount" name="servingAmount" value={this.state.servingAmount} className="textSmall"/>
         <input type="text" onChange={this.Input} id="text-field-default" placeholder="Cookies, loaves, etc...." name="recipeType" value={this.state.recipeType} className="textLoaves"/>
       </div>
+       <button onSubmit={this.handleSubmit} type="submit" className="bigButtons" id="saveRecipe">Save this Recipe!</button>
     </form>
       <div id="secondForm"><p>Step 1 --------------------------------</p>
       <form onSubmit={this.pushSteps}>
@@ -162,7 +159,6 @@ return(
       <form>
         <input type="text" onChange={this.Input} className="bigTextArea" name="personalNotes" value={this.state.personalNotes} placeholder="Personal Notes" />
       </form>
-      <button onSubmit={this.handleSubmit} type="submit" className="bigButtons">Save this Recipe!</button>
     </div>
   </div>
     
