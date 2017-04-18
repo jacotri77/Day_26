@@ -1,67 +1,5 @@
 import React from 'react'
-import TextField from 'material-ui/TextField'
-import Checkbox from 'material-ui/Checkbox'
-import SelectField from 'material-ui/SelectField'
-import MenuItem from 'material-ui/MenuItem'
-import RaisedButton from 'material-ui/RaisedButton'
 import {postRecipe, postUsers, postSteps, postIngredients} from '../api/recipe'
-
-const styles = {
-  // block: {
-  //   maxWidth: 200,
-  // },
-  checkbox: {
-    marginBottom: 16,
-    maxWidth: 200,
-    display:'inline-block'
-
-  },
-  button: {
-    margin: 12,
-  },
-  exampleImageInput: {
-    cursor: 'pointer',
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    right: 0,
-    left: 0,
-    width: '100%',
-    opacity: 0,
-  },
-  selectedField:{
-    height:70,
-    width: 150,
-    fontSize: 14,
-
-  },
-  textFieldSmall:{
-    width: 150,
-    height: 75,
-
-  },
-  textArea:{
-    height: 200,
-    width: 300,
-     border:'1px solid black',
-  }
-  
-}
-const items = [
-  <MenuItem key={1} value="Breaky" name="servingType" primaryText="Breaky"  />,
-  <MenuItem key={2} value="Snach" name="servingType" primaryText="Snack" />,
-  <MenuItem key={3} value="After Da Club" name="servingType" primaryText="After Da Club" />,
-  <MenuItem key={4} value="Munchies" name="servingType" primaryText="Munchies" />,
-
-];
-
-const degrees = [
-	<MenuItem value="F" key={5} name="degrees" primaryText="F" />,
-	<MenuItem value="C" key={6} name="degrees" primaryText="C" />,
-];
-
-
-
 
 export default React.createClass({
   getInitialState(){
@@ -171,51 +109,63 @@ render(){
 return(
 	<div id="formContainter">
     <form id="firstForm">
-      <div id="firstBloc" >
-      <button onClick={this.handlePhoto} type="submit" value={this.state.photo}  style={styles.button} className="plusButton">+ Add Photo</button>
-		  <TextField onChange={this.Input} id="text-field-default" placeholder="Recipe Name" name="recipe" value={this.state.recipe} className="textFieldSmall"/>
-		  <TextField onChange={this.Input} id="text-field-default" placeholder="By" name="user" value={this.state.user} className="textFieldSmall"/>
-    
-		
-    		<Checkbox label="Make it Public" style={styles.checkbox} />
-    		<Checkbox label="Keep it Private" style={styles.checkbox}/>
-    	</div>
-    	<SelectField onChange={this.handleChange} name="servingType"  value={this.state.servingType} floatingLabelText="Recipe Type"  floatingLabelStyle={{color: '#448AFF'}} autoWidth={false} style={styles.selectedField}>
-        {items}
-      </SelectField>
-      <TextField onChange={this.Input} id="text-field-default" placeholder="Prep Time" name="prepTime" value={this.state.prepTime} className="textFieldSmall"/>
-      <TextField onChange={this.Input} id="text-field-default" placeholder="Cook Time" name="cookTime" value={this.state.cookTime} className="textFieldSmall"/>
-      <TextField onChange={this.Input} id="text-field-default" placeholder="Cook Temp" name="cookTemp" value={this.state.cookTemp} className="textFieldSmall" />
-      <SelectField value={this.state.deg} name="deg" onChange={this.handleDegrees} floatingLabelText="Degrees"  floatingLabelStyle={{color: '#448AFF'}} style={styles.selectedField}>{degrees}
-	   </SelectField>
+      
+        <p>Basic Info -------------------------------</p>
+        <div id="buttonPlus">
+          <button onClick={this.handlePhoto} type="button" className="plusButton">+ Add Photo</button>
+		      <input onChange={this.Input} type="text" placeholder="Recipe Name" name="recipe" value={this.state.recipe} className="firstBloc"/>
+		      <input onChange={this.Input} type="text" className="firstBloc" placeholder="By" name="user" value={this.state.user} />
+    		  <input type="checkbox" id="makeItPub" name="Make it Public" />
+            <label htmlFor="makeItPub">Make it Public</label>
+    		  <input type="checkbox" label="Keep it Private" id="keepItPriv" />
+            <label htmlFor="keepItPriv">Keep it Private</label>
+        </div>
+  
+
+    	<select onChange={this.handleChange} name="servingType" value='Serving Type' id="recipeTypeSelect">
+       <option value={this.state.servingType} name="servingType" >Recipe Type</option>
+        <option value={this.state.servingType} name="servingType" >Breaky</option>
+        <option value={this.state.servingType}name="servingType">Snack</option>
+        <option value={this.state.servingType} name="servingType">After Da Club</option>
+        <option value={this.state.servingType} name="servingType">Munchies</option>
+      </select>
+      <input type="text" onChange={this.Input} id="text-field-default" placeholder="Prep Time" name="prepTime" value={this.state.prepTime} className="textSmall"/>
+      <input type="text"onChange={this.Input} id="text-field-default" placeholder="Cook Time" name="cookTime" value={this.state.cookTime} className="textSmall"/>
+      <input type="text" onChange={this.Input} id="text-field-default" placeholder="Cook Temp" name="cookTemp" value={this.state.cookTemp} className="textSmall"/>
+      <select value={this.state.deg} name="deg" onChange={this.handleDegrees} id="degreesSelectType">
+        <option value={this.state.deg} name="degrees" >F or C</option>
+        <option value={this.state.deg} name="degrees" >F</option>
+        <option value={this.state.deg} name="degrees" >C</option>
+	     </select>
       <div id="amountSpan">
         <span> This recipe makes: </span>
-        <TextField onChange={this.Input} id="text-field-default" placeholder="Amount" name="servingAmount" value={this.state.servingAmount} className="textFieldSmall"/>
-        <TextField onChange={this.Input} id="text-field-default" placeholder="Cookies, loaves, etc...." name="recipeType" value={this.state.recipeType} className="textFieldSmall"/>
+        <input type="text" onChange={this.Input} id="text-field-default" placeholder="Amount" name="servingAmount" value={this.state.servingAmount} className="textSmall"/>
+        <input type="text" onChange={this.Input} id="text-field-default" placeholder="Cookies, loaves, etc...." name="recipeType" value={this.state.recipeType} className="textLoaves"/>
       </div>
     </form>
-      <div id="secondForm"><p>Step 1 ---------------------------</p>
+      <div id="secondForm"><p>Step 1 --------------------------------</p>
       <form onSubmit={this.pushSteps}>
         {this.state.inputs.map(input => 
-             <div key={input} id="dynamicInput">
-                  <div>
-                    <TextField onChange={this.Input} id="text-field-default" value={this.state.amount} name="amount" placeholder="amount" className="textFieldSmall" /> 
-                    <TextField onChange={this.Input} id="text-field-default"value={this.state.unit} name="unit" placeholder="unit" className="textFieldSmall" />
-                    <TextField onChange={this.Input} id="text-field-default" value={this.state.ingredients} name="ingredients" placeholder="ingredient"/>
-                    <TextField onChange={this.Input} id="text-field-default" name="directions" value={this.state.directions} placeholder="Directions" multiLine={true} textareaStyle={styles.textArea}/>
-                  </div>
-              </div>)}
-           <RaisedButton type="button" label="+" onClick={ () => this.appendInput() } style={styles.button}/>
-         <RaisedButton type="submit" label="Add Another Step" style={styles.button} />
+           <div key={input} id="dynamicInput">
+              <div>
+                <input type="text"onChange={this.Input} className="smallText" value={this.state.amount} name="amount" placeholder="amount"/> 
+                <input type="text" onChange={this.Input} value={this.state.unit} name="unit" placeholder="unit" className="smallText" />
+                <input type="text" onChange={this.Input} className="textLoaves" value={this.state.ingredients} name="ingredients" placeholder="ingredient"/>
+                <button type="button"onClick={ () => this.appendInput() } className="smallText">+</button>
+                <input type="text" onChange={this.Input} className="bigTextArea" name="directions" value={this.state.directions} placeholder="Directions"/>
+              </div>
+            </div>)}
+         <button type="submit">Add Another Step</button>
         </form>
       </div>
     <div id="thirdForm"><p> Personal Notes ----------------------------</p>
       <form>
-        <TextField onChange={this.Input} id="text-field-default" name="personalNotes" value={this.state.personalNotes} placeholder="Personal Notes" multiLine={true} textareaStyle={styles.textArea}/>
+        <input type="text" onChange={this.Input} id="text-field-default" name="personalNotes" value={this.state.personalNotes} placeholder="Personal Notes" />
       </form>
+      <button onSubmit={this.handleSubmit} type="submit" label="Save this Recipe!" />
     </div>
-    <RaisedButton  onSubmit={this.handleSubmit} type="submit" label="Save this Recipe!" id="fourthForm" style={styles.button} />
-	</div>
+  </div>
+    
 
  
 )
