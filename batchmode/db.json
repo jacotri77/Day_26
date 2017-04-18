@@ -1,54 +1,14 @@
 {
   "users": [
-    {
-      "user": "erik",
-      "id": 1
-    },
-    {
-      "user": "",
-      "id": 2
-    }
+    
   ],
   "recipes": [
-    {
-      "recipe": "erik",
-      "prepTime": "34",
-      "cookTime": "300",
-      "cookTemp": "500",
-      "servingAmount": "24",
-      "servingType": "After Da Club",
-      "deg": "F",
-      "photo": "",
-      "recipeType": "cookies",
-      "id": 1
-    },
-    {
-      "recipe": "",
-      "prepTime": "",
-      "cookTime": "",
-      "cookTemp": "",
-      "servingAmount": "",
-      "servingType": "After Da Club",
-      "deg": "F",
-      "photo": "",
-      "recipeType": "",
-      "id": 2
-    }
+    
   ],
   "steps": [
-    {
-      "recipeId": 1,
-      "directions": "make the dough",
-      "id": 1
-    }
+    
   ],
   "ingredients": [
-    {
-      "ingredients": 1,
-      "stepId": "mallow",
-      "amount": "4",
-      "unit": "cups",
-      "id": 1
-    }
+    
   ]
 }
