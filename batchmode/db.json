@@ -1,52 +1,187 @@
 {
-  "users": [],
-  "recipes": [],
+  "users": [
+    {
+      "user": "",
+      "id": 1
+    },
+    {
+      "user": "erik",
+      "id": 2
+    },
+    {
+      "user": "",
+      "id": 3
+    },
+    {
+      "user": "",
+      "id": 4
+    },
+    {
+      "user": "",
+      "id": 5
+    },
+    {
+      "user": "",
+      "id": 6
+    },
+    {
+      "user": "",
+      "id": 7
+    },
+    {
+      "user": "erik",
+      "id": 8
+    }
+  ],
+  "recipes": [
+    {
+      "recipe": "",
+      "userId": "",
+      "prepTime": "",
+      "cookTime": "",
+      "cookTemp": "",
+      "servingAmount": "",
+      "servingType": "",
+      "deg": "",
+      "photo": "",
+      "recipeType": "",
+      "personalNotes": "",
+      "id": 1
+    },
+    {
+      "recipe": "erik",
+      "userId": "",
+      "prepTime": "",
+      "cookTime": "",
+      "cookTemp": "",
+      "servingAmount": "",
+      "servingType": "",
+      "deg": "",
+      "photo": "",
+      "recipeType": "",
+      "personalNotes": "",
+      "id": 2
+    },
+    {
+      "recipe": "",
+      "userId": "",
+      "prepTime": "",
+      "cookTime": "",
+      "cookTemp": "",
+      "servingAmount": "",
+      "servingType": "After Da Club",
+      "deg": "",
+      "photo": "",
+      "recipeType": "",
+      "personalNotes": "",
+      "id": 3
+    },
+    {
+      "recipe": "",
+      "userId": "",
+      "prepTime": "20",
+      "cookTime": "20",
+      "cookTemp": "450",
+      "servingAmount": "",
+      "servingType": "After Da Club",
+      "deg": "",
+      "photo": "",
+      "recipeType": "",
+      "personalNotes": "",
+      "id": 4
+    },
+    {
+      "recipe": "",
+      "userId": "",
+      "prepTime": "",
+      "cookTime": "",
+      "cookTemp": "",
+      "servingAmount": "",
+      "servingType": "After Da Club",
+      "deg": "",
+      "photo": "",
+      "recipeType": "",
+      "personalNotes": "",
+      "id": 5
+    },
+    {
+      "recipe": "",
+      "userId": "",
+      "prepTime": "",
+      "cookTime": "",
+      "cookTemp": "",
+      "servingAmount": "",
+      "servingType": "After Da Club",
+      "deg": "",
+      "photo": "",
+      "recipeType": "",
+      "personalNotes": "",
+      "id": 6
+    },
+    {
+      "recipe": "",
+      "userId": "",
+      "prepTime": "",
+      "cookTime": "",
+      "cookTemp": "",
+      "servingAmount": "",
+      "servingType": "After Da Club",
+      "deg": "",
+      "photo": "",
+      "recipeType": "",
+      "personalNotes": "",
+      "id": 7
+    },
+    {
+      "recipe": "erik",
+      "userId": "",
+      "prepTime": "24",
+      "cookTime": "24",
+      "cookTemp": "450",
+      "servingAmount": "5",
+      "servingType": "Snack",
+      "deg": "",
+      "photo": "",
+      "recipeType": "555555",
+      "personalNotes": "55555555",
+      "id": 8
+    }
+  ],
   "steps": [
     {
-      "recipeId": 1,
-      "directions": "",
+      "recipeId": 2,
+      "directions": "555555",
       "id": 1
     },
     {
       "recipeId": 1,
-      "directions": "",
+      "directions": "dis is gooder",
       "id": 2
     },
     {
       "recipeId": 1,
       "directions": "",
       "id": 3
-    },
-    {
-      "recipeId": 1,
-      "directions": "",
-      "id": 4
     }
   ],
   "ingredients": [
     {
-      "ingredients": [],
-      "amount": "",
-      "unit": "",
+      "ingredients": "55555555",
+      "amount": "5",
+      "unit": "5555",
       "id": 1
     },
     {
-      "ingredients": [],
-      "amount": "",
-      "unit": "",
+      "ingredients": "harsh",
+      "amount": "4",
+      "unit": "ouces",
       "id": 2
     },
     {
-      "ingredients": "",
-      "amount": "",
-      "unit": "",
+      "ingredients": "smattering",
+      "amount": "23434343",
+      "unit": "tonka trucks",
       "id": 3
-    },
-    {
-      "ingredients": "",
-      "amount": "",
-      "unit": "",
-      "id": 4
     }
   ]
 }

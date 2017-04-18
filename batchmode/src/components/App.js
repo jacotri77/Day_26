@@ -16,8 +16,6 @@ export default React.createClass({
         <Router>
         	<div>
           <Header />
-        	<Route exact={true} path="/" component={NewRecipe}/>
-          <Route path="/recipeDisplay/:recipeId" component={RecipeDisplay} />
           <LeftNav />
           <NewRecipe />
           </div>
@@ -30,3 +28,5 @@ export default React.createClass({
 
 
           // <Route path="/photo/:photosId" component={Photo} />
+          // <Route exact={true} path="/" component={NewRecipe}/>
+          // <Route path="/recipeDisplay/:recipeId" component={RecipeDisplay} />

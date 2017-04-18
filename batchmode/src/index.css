@@ -11,7 +11,8 @@ html {
 @import url('https://fonts.googleapis.com/css?family=Oxygen|Titillium+Web');
 
 body{
-  background-image:url('https://source.unsplash.com/4vF060ahKyM/2000x1500');
+  background-image:url('https://source.unsplash.com/4vF060ahKyM/2500x2500');
+  background-repeat: no-repeat;
   margin: 0px;
 }
 
@@ -21,6 +22,7 @@ body{
   width:100%;
   background-color: #00001a;
   color:#80bfff;
+  opacity: .8;
 }
 
 #formContainter{
@@ -34,7 +36,8 @@ body{
   
 }
 #leftMenu{
-  height:1400px;
+  opacity: .8;
+  height:2000px;
 	width:18%;
 	float: left;
 	display: inline-block;
@@ -71,7 +74,7 @@ body{
 
 }
 
-#firstForm, #secondForm, #thirdForm, #fourthForm{
+#firstForm, #secondForm, #thirdForm{
   display: block;
   text-align: center;
   width:60%;
@@ -80,9 +83,6 @@ body{
   opacity: .8;
 }
 
-#thirdForm{
-  height:230px;
-}
 .textFieldSmall{
   display: block;
   width: 300px;
@@ -183,11 +183,7 @@ option{
   background-color:#64B5F6;
 }
 #saveRecipe{
-  opacity: .8;
-  position: absolute;
-  z-index: 0;
-  bottom:-250px;
-  left:850px;
+  
 }
 
 

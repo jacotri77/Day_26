@@ -28,25 +28,24 @@ export default React.createClass({
 
 handleChange(e){
   this.setState({
-    servingType: e.target.value,
+    [e.target.name]: e.target.value,
   })
 },
 
 handleDegrees(e){
  this.setState({
-    deg:this.state.deg
+    [e.target.name]:e.target.value,
   })
 },
 
 handleSubmit(e){
-    e.preventDefault()
     postRecipe(this.state.recipe, this.state.userId, this.state.prepTime, this.state.cookTime, this.state.cookTemp, this.state.servingAmount, this.state.servingType,this.state.deg, this.state.photo, this.state.recipeType, this.state.personalNotes)
     postUsers(this.state.user)
     this.setState({
       recipe:'',
       user:'',
       userId:this.state.userId,
-      step:this.state.steps,
+      step:this.state.step,
       ingredients:this.state.ingredients,
       id: this.state.id + 1,
       prepTime: "",
@@ -67,14 +66,12 @@ Input(e){
   
   })
 },
-appendInput() {
+appendInput(e) {
+ 
   var newInput = `input-${this.state.inputs.length}`
   this.setState({ 
     inputs: this.state.inputs.concat([newInput]),
-    amount:'',
-    directions:'',
-    unit:'',
-    ingredients:[],
+    
 
   })
 },
@@ -103,7 +100,7 @@ pushSteps(e){
 
 render(){
 return(
-	<div id="formContainter">
+	<div id="formContainter" >
     <form id="firstForm" >
       
         <p>Basic Info -------------------------------</p>
@@ -128,17 +125,17 @@ return(
       <input type="text" onChange={this.Input} id="text-field-default" placeholder="Prep Time" name="prepTime" value={this.state.prepTime} className="textSmall"/>
       <input type="text"onChange={this.Input} id="text-field-default" placeholder="Cook Time" name="cookTime" value={this.state.cookTime} className="textSmall"/>
       <input type="text" onChange={this.Input} id="text-field-default" placeholder="Cook Temp" name="cookTemp" value={this.state.cookTemp} className="textSmall"/>
-      <select name="deg" onChange={this.handleDegrees} id="degreesSelectType">
-        <option value={this.state.deg} name="degrees" >F or C</option>
-        <option value={this.state.deg} name="degrees" >F</option>
-        <option value={this.state.deg} name="degrees" >C</option>
+      <select name="deg" onChange={this.handleDegrees} value={this.state.deg} id="degreesSelectType">
+        <option value="F or C"name="degrees" >F or C</option>
+        <option value='F' name="degrees" >F</option>
+        <option value="C" name="degrees" >C</option>
 	     </select>
       <div id="amountSpan">
         <span> This recipe makes: </span>
         <input type="text" onChange={this.Input} id="text-field-default" placeholder="Amount" name="servingAmount" value={this.state.servingAmount} className="textSmall"/>
         <input type="text" onChange={this.Input} id="text-field-default" placeholder="Cookies, loaves, etc...." name="recipeType" value={this.state.recipeType} className="textLoaves"/>
       </div>
-       <button onSubmit={this.handleSubmit} type="submit" className="bigButtons" id="saveRecipe">Save this Recipe!</button>
+     
     </form>
       <div id="secondForm"><p>Step 1 --------------------------------</p>
       <form onSubmit={this.pushSteps}>
@@ -159,6 +156,7 @@ return(
       <form>
         <input type="text" onChange={this.Input} className="bigTextArea" name="personalNotes" value={this.state.personalNotes} placeholder="Personal Notes" />
       </form>
+        <button  type="submit" onClick={this.handleSubmit} className="bigButtons" id="saveRecipe">Save this Recipe!</button>
     </div>
   </div>
     
