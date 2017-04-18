@@ -122,10 +122,10 @@ return(
         </div>
   
 
-    	<select onChange={this.handleChange} name="servingType" value='Serving Type' id="recipeTypeSelect">
-       <option value={this.state.servingType} name="servingType" >Recipe Type</option>
+    	<select onChange={this.handleChange} name="servingType" id="recipeTypeSelect">
+        <option value={this.state.servingType} name="servingType" >Recipe Type</option>
         <option value={this.state.servingType} name="servingType" >Breaky</option>
-        <option value={this.state.servingType}name="servingType">Snack</option>
+        <option value={this.state.servingType} name="servingType">Snack</option>
         <option value={this.state.servingType} name="servingType">After Da Club</option>
         <option value={this.state.servingType} name="servingType">Munchies</option>
       </select>
@@ -155,14 +155,14 @@ return(
                 <input type="text" onChange={this.Input} className="bigTextArea" name="directions" value={this.state.directions} placeholder="Directions"/>
               </div>
             </div>)}
-         <button type="submit">Add Another Step</button>
+         <button type="submit" className="bigButtons">Add Another Step</button>
         </form>
       </div>
     <div id="thirdForm"><p> Personal Notes ----------------------------</p>
       <form>
-        <input type="text" onChange={this.Input} id="text-field-default" name="personalNotes" value={this.state.personalNotes} placeholder="Personal Notes" />
+        <input type="text" onChange={this.Input} className="bigTextArea" name="personalNotes" value={this.state.personalNotes} placeholder="Personal Notes" />
       </form>
-      <button onSubmit={this.handleSubmit} type="submit" label="Save this Recipe!" />
+      <button onSubmit={this.handleSubmit} type="submit" className="bigButtons">Save this Recipe!</button>
     </div>
   </div>
     
