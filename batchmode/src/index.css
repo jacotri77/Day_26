@@ -24,6 +24,15 @@ body{
   color:#80bfff;
   opacity: .8;
 }
+#headerMenu li{
+  display: inline-block;
+
+}
+
+.fa {
+  color:#80bfff;
+  background-color:white;
+}
 
 #formContainer{
   display: block;
