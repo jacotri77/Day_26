@@ -184,6 +184,7 @@ option{
 }
 a:link, a:hover, a:visited, a:active{
   color:#80bfff;
+  text-decoration: none;
 }
 
 
