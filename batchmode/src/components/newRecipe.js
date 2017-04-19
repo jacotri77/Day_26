@@ -100,7 +100,7 @@ pushSteps(e){
 
 render(){
 return(
-	<div id="formContainter" >
+	<div id="formContainer" >
     <form id="firstForm" >
       
         <p>Basic Info -------------------------------</p>

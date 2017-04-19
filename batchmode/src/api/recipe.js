@@ -17,6 +17,7 @@ export function postRecipe(recipe, userId, prepTime, cookTime, cookTemp, serving
 		    photo: recipe.photo,
 		    recipeType: recipe.recipeType,
 		    personalNotes: recipe.personalNotes,
+		    
 
 
 		})
@@ -44,7 +45,7 @@ export function postSteps(recipeId, directions, stepId) {
 		})
 	})
 }
-export function postIngredients(ingredients,stepId,  amount, unit) {
+export function postIngredients(ingredients,stepId, amount, unit) {
 	axios.post('http://localhost:3001/ingredients',{ingredients, stepId, amount, unit}).then(ingredient=>{
 		
 		store.dispatch({

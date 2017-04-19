@@ -19,3 +19,29 @@
       //  <input type="text" placeholder='ingredient' id="ingredientInput"/>
       //  <button type="button" id="btn1">+</button>
       //  <button type="submit" id="ingredientSubmit">Just push this shit into the steps</
+
+      const unsplash = new Unsplash({
+  applicationId: "{4f6e548d0b56144befd0b2196ef0a7a21881fbcdaff823ac67ba060bb5e04d9b}",
+  secret: "{ba7d1e96898e3bac476772914fca9e88c427d3d8e484a476ddec437feac4637e}",
+  callbackUrl: "{urn:ietf:wg:oauth:2.0:oob}"
+})
+
+      case 'GET_PHOTO':
+      return {state, directions: {...action.unsplash}}
+
+
+
+      
+      export function newUnsplash(unsplash) {
+  axios.get('https://api.unsplash.com/search/photos?query=dessert',{unsplash}).then(photo=>{
+    console.log(photo)
+    store.dispatch({
+      type: 'GET_PHOTO',
+      photo: photo.data,
+      applicationId: "{4f6e548d0b56144befd0b2196ef0a7a21881fbcdaff823ac67ba060bb5e04d9b}",
+        secret: "{ba7d1e96898e3bac476772914fca9e88c427d3d8e484a476ddec437feac4637e}",
+        callbackUrl: "{urn:ietf:wg:oauth:2.0:oob}",
+      
+    })
+  })
+}
