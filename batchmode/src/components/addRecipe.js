@@ -90,7 +90,7 @@ render(){
 				<li>My Pantry</li>
 			</ul>
 		</div>
-		<div id="formContainter">
+		<div id="formContainer">
 		<div>
 			<form onSubmit={this.handleSubmit}>
 				<input type="text" id={this.state.id} onChange={this.handleChange} placeholder="Recipe Name" name="recipe" value={this.state.recipe} />
