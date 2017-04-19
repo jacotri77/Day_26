@@ -11,8 +11,8 @@ export default React.createClass({
     ingredients:[],
     directions: '',
     id:1,
-    prepTime: "",
-    cookTime: "",
+    prepTime: '',
+    cookTime: '',
     cookTemp: '',
     servingAmount: "",
     servingType: "",
@@ -48,10 +48,10 @@ handleSubmit(e){
       step:this.state.step,
       ingredients:this.state.ingredients,
       id: this.state.id + 1,
-      prepTime: "",
-      cookTime: "",
-      cookTemp: '',
-      servingAmount: "",
+      prepTime: 0,
+      cookTime: 0,
+      cookTemp: 0,
+      servingAmount:0,
       servingType: this.state.servingType,
       photo: "",
       deg:this.state.deg,
@@ -83,7 +83,7 @@ pushSteps(e){
       step:[],
       ingredients:'',
       directions: '',
-      amount: '',
+      amount: 0,
       unit:'',
   
     })
@@ -126,7 +126,6 @@ return(
       <input type="text"onChange={this.Input} id="text-field-default" placeholder="Cook Time" name="cookTime" value={this.state.cookTime} className="textSmall"/>
       <input type="text" onChange={this.Input} id="text-field-default" placeholder="Cook Temp" name="cookTemp" value={this.state.cookTemp} className="textSmall"/>
       <select name="deg" onChange={this.handleDegrees} value={this.state.deg} id="degreesSelectType">
-        <option value="F or C"name="degrees" >F or C</option>
         <option value='F' name="degrees" >F</option>
         <option value="C" name="degrees" >C</option>
 	     </select>

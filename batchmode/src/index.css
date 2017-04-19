@@ -182,8 +182,8 @@ option{
   margin-bottom: 20px;
   background-color:#64B5F6;
 }
-#saveRecipe{
-  
+a:link, a:hover, a:visited, a:active{
+  color:#80bfff;
 }
 
 

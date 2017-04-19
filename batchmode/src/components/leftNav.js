@@ -7,11 +7,11 @@ return(
 	<div id="fullContainer">
 		<div id="leftMenu">
 			<ul>
-				<li>My Recipes</li>
-				<li>Public Recipes</li>
-				<li>Popular Recipes</li>
-				<li>My Favorite Recipes</li>
-				<li>My Pantry</li>
+				<li><a href="#">My Recipes</a></li>
+				<li><a href="#">Public Recipes</a></li>
+				<li><a href="#">Popular Recipes</a></li>
+				<li><a href="#">My Favorite Recipes</a></li>
+				<li><a href="#">My Pantry</a></li>
 			</ul>
 		</div>
 	</div>
