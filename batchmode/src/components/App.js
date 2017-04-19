@@ -3,7 +3,6 @@ import NewRecipe from '../components/newRecipe'
 import RecipeDisplay from '../components/recipeDisplay'
 import Header from '../components/header'
 import LeftNav from '../components/leftNav'
-import '../../node_modules/font-awesome/css/font-awesome.css'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 

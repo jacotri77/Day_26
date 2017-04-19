@@ -1,8 +1,5 @@
 html {
 	box-sizing: border-box;
-}
-
-*, *:before, *:after{
 	box-sizing: inherit;
   font-family: 'Titillium Web', sans-serif;
   font-size: 18px;
@@ -31,7 +28,8 @@ body{
 
 .fa {
   color:#80bfff;
-  background-color:white;
+  opacity: 1;
+ 
 }
 
 #formContainer{
@@ -197,3 +195,7 @@ a:link, a:hover, a:visited, a:active{
 }
 
 
+
+i {
+  color: #FFF
+}
