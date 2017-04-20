@@ -1,12 +1,13 @@
 import axios from 'axios'
 import store from '../store'
 
-export function postRecipe(recipe, userId, prepTime, cookTime, cookTemp, servingAmount, servingType, deg, photo, recipeType, personalNotes ) {
-	axios.post('http://localhost:3001/recipes',{recipe, userId, prepTime, cookTime, cookTemp, servingAmount, servingType,deg, photo, recipeType,personalNotes }).then(recipe=>{
+export function postRecipe(recipeName, userId, prepTime, cookTime, cookTemp, servingAmount, servingType, deg, photo, recipeType, personalNotes ) {
+	axios.post('http://localhost:3001/recipes',{recipeName, userId, prepTime, cookTime, cookTemp, servingAmount, servingType,deg, photo, recipeType,personalNotes }).then(recipe=>{
 		console.log(recipe)
 		store.dispatch({
 			type: 'POST_RECIPE',
 			recipe: recipe.data,
+			recipeName: recipe.data.recipeName,
 			userId: recipe.userId,
 			prepTime: recipe.prepTime,
 		    cookTime: recipe.cookTime,
@@ -17,8 +18,6 @@ export function postRecipe(recipe, userId, prepTime, cookTime, cookTemp, serving
 		    photo: recipe.photo,
 		    recipeType: recipe.recipeType,
 		    personalNotes: recipe.personalNotes,
-		    
-
 
 		})
 })
@@ -60,9 +59,11 @@ export function postIngredients(ingredients,stepId, amount, unit) {
 
 export function getRecipe(recipe){
 	axios.get('http://localhost:3001/recipes', {recipe}).then(recipe=>{
+		console.log('from api',recipe)
 		store.dispatch({
 			type:'GET_RECIPE',
-			recipe: recipe.data
+			recipe:recipe.data,
+			
 		})
 	})
 

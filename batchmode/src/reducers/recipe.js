@@ -1,5 +1,5 @@
 const initialState = {
-	reicpe:[],
+	recipe:[],
 	step: [],
 	ingredients:'',
 	user:'',
@@ -23,6 +23,8 @@ const initialState = {
 
 
 export default function(state=initialState, action) {
+
+	console.log('from reducer ', action.recipe)
 	switch (action.type) {
 		case 'POST_RECIPE': 
 			return {...state,  recipe: {...action.recipe}, id:{...action.id},prepTime: {...action.prepTime}, cookTemp:{...action.cookTemp}, cookTime: {...action.cookTime}, deg: {...action.deg}, servingAmount: {...action.servingAmount}, servingType: {...action.servingType}, photo: {...action.photo}, recipeType: {...action.recipeType}, personalNotes: {...action.personalNotes} , user: {...action.user}}

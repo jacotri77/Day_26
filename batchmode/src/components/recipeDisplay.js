@@ -4,36 +4,41 @@ import store from '../store'
 
 
 class RecipeDisplay extends React.Component{
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
     this.state ={
-      recipe:[]
+      recipe:[],
+      recipeName:''
+      
     }
   }
    componentWillMount(){
      this.unsubscribe = store.subscribe(()=>{
        const appState = store.getState()
-       console.log(appState)
-     this.setState({
-       recipe: appState.recipe
 
+       console.log('from recDis Mount', appState)
+
+     this.setState({
+       recipe: appState.recipe,
+       recipeName: appState.recipe.recipeName
+         
      })
      })
      getRecipe()
+     console.log('from getRecipe',getRecipe)
    }
 
    componentWillUnMount(){
      this.unsubscribe()
    }
 render(){
+   console.log('from h1',this.state.recipe.recipeName)
 return(
   <div>
     <div>
-    {this.state.recipe.map(action=>(
-       <h1 key={action.id}>{action.by}</h1>
-    
-    ))}
-      <h1></h1>
+   
+      <h1>{this.state.recipe.recipeName}</h1>
+     
       <h6> this is who it is by</h6>
     </div>
     <div id="bigPicture">
@@ -50,7 +55,14 @@ return(
         </ul>
     </div>
     )
+   
 }
-
+ 
 }
 export default RecipeDisplay
+
+
+ // {this.state.recipe.map(action=>(
+    //    <h1 key={action.id+ 1}>{action.by}</h1>
+    
+    // ))}

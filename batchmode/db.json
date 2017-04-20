@@ -1,13 +1,13 @@
 {
   "users": [
     {
-      "user": "",
+      "user": "Erik",
       "id": 1
     }
   ],
   "recipes": [
     {
-      "recipe": "Brownies of Death",
+      "recipeName": "Brownies of Death",
       "userId": "",
       "prepTime": "",
       "cookTime": "",
