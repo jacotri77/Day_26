@@ -67,7 +67,6 @@ Input(e){
   })
 },
 appendInput(e) {
- 
   var newInput = `input-${this.state.inputs.length}`
   this.setState({ 
     inputs: this.state.inputs.concat([newInput]),

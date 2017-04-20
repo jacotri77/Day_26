@@ -4,7 +4,7 @@ class Header extends Component{
  render(){
    return(
   <div id="headerMenu">
-    <p>Hello</p>
+    <p>"Get after it like Shenanigans O'Ryan !"</p>
     <ul>
         <li><i className="fa fa-plus fa-2x" aria-hidden="true"></i></li>
         <li><i className="fa fa-cog fa-2x" aria-hidden="true"></i></li>

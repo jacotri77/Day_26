@@ -29,7 +29,23 @@ body{
 .fa {
   color:#80bfff;
   opacity: 1;
+}
+
+#headerMenu p, #headerMenu ul{
+  display:inline-block;
+}
+
+#headerMenu ul{
+  float:right;
+  margin:auto;
+  padding-top:10px;
  
+}
+
+#headerMenu li{
+  margin: 0 20px;
+   
+
 }
 
 #formContainer{

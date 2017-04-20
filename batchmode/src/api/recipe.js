@@ -58,6 +58,15 @@ export function postIngredients(ingredients,stepId, amount, unit) {
 	})
 }
 
+export function getRecipe(recipe){
+	axios.get('http://localhost:3001/recipes', {recipe}).then(recipe=>{
+		store.dispatch({
+			type:'GET_RECIPE',
+			recipe: recipe.data
+		})
+	})
+
+}
 // export function getPhoto(photo) {
 // 	axios.get('https://api.unsplash.com/search/photos?query=dessert',{photo}).then(photo=>{
 // 		console.log(photo)
