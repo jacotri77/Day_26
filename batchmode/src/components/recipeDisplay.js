@@ -12,7 +12,7 @@ class RecipeDisplay extends React.Component{
         recipeName:'',
         userId:'',
       },
-      user:''
+     
     }
     console.log('from class', this.state.recipe)
   }
@@ -39,7 +39,7 @@ return(
       
         <div key={this.state.recipe.recipeName+1}>
            <h1>{this.state.recipe.recipeName}</h1>
-            <h6> {this.state.recipe.userId}</h6>
+            <h6> {this.state.recipe.user}</h6>
          </div>
        
     </div>

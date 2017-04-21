@@ -1,5 +1,6 @@
 const initialState = {
 	recipes:[],
+	steps:[],
 	"public": true,
     "recipeType":"",
     "prepTime": '',
@@ -22,7 +23,7 @@ export default function(state=initialState, action) {
 		case 'POST_USERS':
 			return {...state, user: {...action.user}, recipeId: {...action.recipeId}}
 		case 'POST_STEPS':
-			return {...state,  step: {...action.step}}
+			return {...state,  steps: [...state.steps, action.steps]}
 		case 'GET_RECIPE':
 			return {...state, recipe: {...action.recipe}, userId:{...action.userId}}
 		default:
