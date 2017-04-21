@@ -4,42 +4,44 @@ import store from '../store'
 
 
 class RecipeDisplay extends React.Component{
+ 
   constructor() {
     super()
     this.state ={
-      recipe:[],
-      recipeName:''
-      
+      recipe:{
+        recipeName:'',
+        userId:'',
+      },
+      user:''
     }
+    console.log('from class', this.state.recipe)
   }
    componentWillMount(){
      this.unsubscribe = store.subscribe(()=>{
        const appState = store.getState()
-
        console.log('from recDis Mount', appState)
-
-     this.setState({
-       recipe: appState.recipe,
-       recipeName: appState.recipe.recipeName
-         
-     })
-     })
-     getRecipe()
-     console.log('from getRecipe',getRecipe)
-   }
-
-   componentWillUnMount(){
-     this.unsubscribe()
-   }
+        this.setState({
+          recipe: appState.recipe,
+          userId: appState.userId        
+      })
+    })
+     getRecipe(this.props.match.params.recipeId)
+      // getUsers(this.props.match.params.user)
+  }
+  componentWillUnMount(){
+    this.unsubscribe()
+  }
 render(){
-   console.log('from h1',this.state.recipe.recipeName)
+   console.log('from h1',this.state.recipe)
 return(
   <div>
     <div>
-   
-      <h1>{this.state.recipe.recipeName}</h1>
-     
-      <h6> this is who it is by</h6>
+      
+        <div key={this.state.recipe.recipeName+1}>
+           <h1>{this.state.recipe.recipeName}</h1>
+            <h6> {this.state.recipe.userId}</h6>
+         </div>
+       
     </div>
     <div id="bigPicture">
       <img src="#" alt="bigPic"/>

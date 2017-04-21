@@ -4,7 +4,7 @@ import {postRecipe, postUsers, postSteps, postIngredients} from '../api/recipe'
 export default React.createClass({
   getInitialState(){
     return{
-    recipe:[],
+    recipe:'',
     recipeName: '',
     user: '',
     userId:'',
@@ -41,12 +41,12 @@ handleDegrees(e){
 
 handleSubmit(e){
     postRecipe(this.state.recipe, this.state.userId, this.state.prepTime, this.state.cookTime, this.state.cookTemp, this.state.servingAmount, this.state.servingType,this.state.deg, this.state.photo, this.state.recipeType, this.state.personalNotes)
-    postUsers(this.state.user)
+    postUsers(this.state.user, this.state.recipeId)
     this.setState({
-      recipe:[],
+      recipe:{},
       recipeName:'',
       user:'',
-      userId:this.state.userId,
+      userId:" ",
       step:this.state.step,
       ingredients:this.state.ingredients,
       id: this.state.id + 1,

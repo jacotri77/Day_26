@@ -32,6 +32,7 @@ export default React.createClass({
 		postUsers(this.state.user)
 		this.setState({
 			recipe:'',
+			userId: '',
 			user:'',
 			step:this.state.steps,
 			stepId:1,

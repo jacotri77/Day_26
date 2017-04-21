@@ -1,26 +1,7 @@
 {
-  "users": [
-    {
-      "user": "Erik",
-      "id": 1
-    }
-  ],
-  "recipes": [
-    {
-      "recipeName": "Brownies of Death",
-      "userId": "",
-      "prepTime": "",
-      "cookTime": "",
-      "cookTemp": "",
-      "servingAmount": "",
-      "servingType": "",
-      "deg": "",
-      "photo": "",
-      "recipeType": "",
-      "personalNotes": "",
-      "id": 1
-    }
-  ],
-  "steps": [],
-  "ingredients": []
+  "users": [],
+  "recipes":[],
+  "steps":[],
+  "ingredients":[],
+  "notes":[]
 }

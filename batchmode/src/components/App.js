@@ -3,31 +3,32 @@ import NewRecipe from '../components/newRecipe'
 import RecipeDisplay from '../components/recipeDisplay'
 import Header from '../components/header'
 import LeftNav from '../components/leftNav'
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {Link, Route} from 'react-router-dom'
 
 
 
-export default React.createClass({
-
+class App extends Component{
+  handleClick = (e) => {
+    e.preventDefault()
+    this.props.history.push('/addRecipe')
+  }
   render() {
-   
     return (
-    
-        <Router>
         	<div>
-          <Header />
-          <LeftNav />
-          <NewRecipe />
-          <Route path="/recipeDisplay/:recipeId" component={RecipeDisplay} />
+            <Link to="/">Home Page</Link><br />
+            <button onClick={this.handleClick}>Add Recipe</button>
+            <Header />
+            <LeftNav />
+            <Route exact={true} path="/" component={Home}/>
+            <Route path="/addRecipe" component={newRecipe} />
+           <Route path="/recipeDisplay/:recipeId" component={RecipeDisplay} />
           </div>
-        </Router>
-  
     )
   }
-
 })
+export default App
 
 
-          // <Route path="/photo/:photosId" component={Photo} />
-          // <Route exact={true} path="/" component={NewRecipe}/>
-          // <Route path="/recipeDisplay/:recipeId" component={RecipeDisplay} />
+         
+          
+         

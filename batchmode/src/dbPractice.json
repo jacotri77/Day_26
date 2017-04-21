@@ -12,6 +12,58 @@
     
   ]
 }
+------------------
+
+{
+  "users": [
+    {
+      "id":1,
+      "name":""
+    }
+  ],
+"recipes":[
+  {
+    "id": 1,
+    "photo":"",
+    "name": "",
+    "user": "",
+    "public": true,
+    "recipeType":"",
+    "prepTime": 0,
+    "cookTime": 0,
+    "cookTemp": 0,
+    "ForC": "",
+    "servingAmount":0,
+    "servingType":"",
+    }
+  ],
+  "steps": [
+    {
+      "id":1,
+      "recipeId":1,
+      "directions":"",
+    }
+  ],
+  "ingredients": [
+    {
+      "id":1,
+      "stepId":1,
+      "amount":0,
+      "unit": "",
+      "ingredient":""
+    }
+  ],
+  "notes": [
+    {
+      "userId": " ",
+      "recipeId":" ",
+      "notes":" ",
+    }
+  ]
+}
+
+
+
 
 
 //  <input type="text" placeholder='amount' id="amountInput"/>

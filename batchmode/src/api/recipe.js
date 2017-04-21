@@ -3,30 +3,31 @@ import store from '../store'
 
 export function postRecipe(recipeName, userId, prepTime, cookTime, cookTemp, servingAmount, servingType, deg, photo, recipeType, personalNotes ) {
 	axios.post('http://localhost:3001/recipes',{recipeName, userId, prepTime, cookTime, cookTemp, servingAmount, servingType,deg, photo, recipeType,personalNotes }).then(recipe=>{
-		console.log(recipe)
+		console.log('from postrecipe', recipe.userId)
 		store.dispatch({
 			type: 'POST_RECIPE',
 			recipe: recipe.data,
+			userId: recipe.data.userId,
+			prepTime: recipe.data.prepTime,
+		    cookTime: recipe.data.cookTime,
+		    cookTemp: recipe.data.cookTemp,
+		    deg: recipe.data.deg,
+		    servingAmount: recipe.data.servingAmount,
+		    servingType: recipe.data.servingType,
+		    photo: recipe.data.photo,
+		    recipeType: recipe.data.recipeType,
+		    personalNotes: recipe.data.personalNotes,
 			recipeName: recipe.data.recipeName,
-			userId: recipe.userId,
-			prepTime: recipe.prepTime,
-		    cookTime: recipe.cookTime,
-		    cookTemp: recipe.cookTemp,
-		    deg: recipe.deg,
-		    servingAmount: recipe.servingAmount,
-		    servingType: recipe.servingType,
-		    photo: recipe.photo,
-		    recipeType: recipe.recipeType,
-		    personalNotes: recipe.personalNotes,
 
 		})
 })
 }
-export function postUsers(user) {
-	axios.post('http://localhost:3001/users',{user}).then(user=>{
+export function postUsers(user, recipeId) {
+	axios.post('http://localhost:3001/users',{user, recipeId}).then(user=>{
 		store.dispatch({
 			type: 'POST_USERS',
 			user: user.data,
+			recipeId: user.data.recipeId
 			
 		})
 	})
@@ -39,8 +40,7 @@ export function postSteps(recipeId, directions, stepId) {
 			recipeId: step.data.recipeId,
 			directions: step.data.directions,
 			stepId: step.data.stepId,
-			
-			
+
 		})
 	})
 }
@@ -57,16 +57,25 @@ export function postIngredients(ingredients,stepId, amount, unit) {
 	})
 }
 
-export function getRecipe(recipe){
-	axios.get('http://localhost:3001/recipes', {recipe}).then(recipe=>{
-		console.log('from api',recipe)
+export function getRecipe(id, userId){
+	axios.get('http://localhost:3001/recipes/' + id).then(recipe=>{
+		console.log('from api',userId)
 		store.dispatch({
 			type:'GET_RECIPE',
 			recipe:recipe.data,
-			
+			userId:recipe.data.userId
+
 		})
 	})
+}
 
+export function getUsers(id) {
+	axios.get('http://localhost:3001/users' + id).then(user=>{
+		store.dispatch({
+			type: 'POST_USERS',
+			user: user.data,
+		})
+	})
 }
 // export function getPhoto(photo) {
 // 	axios.get('https://api.unsplash.com/search/photos?query=dessert',{photo}).then(photo=>{
