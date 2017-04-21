@@ -1,7 +1,57 @@
 {
   "users": [],
-  "recipes":[],
-  "steps":[],
-  "ingredients":[],
-  "notes":[]
+  "recipes": [
+    {
+      "recipeName": "mud brownies",
+      "user": "charlottw",
+      "id": 1
+    },
+    {
+      "recipeName": "cookies",
+      "user": "erik",
+      "id": 2
+    },
+    {
+      "recipeName": "cookies",
+      "user": "Erik",
+      "public": true,
+      "recipeType": "loaves",
+      "prepTime": "25",
+      "cookTime": "35",
+      "cookTemp": "450",
+      "deg": "",
+      "servingAmount": "4",
+      "servingType": "Snack",
+      "id": 3
+    },
+    {
+      "recipeName": "",
+      "user": "",
+      "public": true,
+      "recipeType": "",
+      "prepTime": 0,
+      "cookTime": 0,
+      "cookTemp": 0,
+      "deg": "",
+      "servingAmount": 0,
+      "servingType": "",
+      "id": 4
+    },
+    {
+      "recipeName": "",
+      "user": "",
+      "public": true,
+      "recipeType": "",
+      "prepTime": 0,
+      "cookTime": 0,
+      "cookTemp": 0,
+      "deg": "F",
+      "servingAmount": 0,
+      "servingType": "",
+      "id": 5
+    }
+  ],
+  "steps": [],
+  "ingredients": [],
+  "notes": []
 }

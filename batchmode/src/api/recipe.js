@@ -1,23 +1,18 @@
 import axios from 'axios'
 import store from '../store'
 
-export function postRecipe(recipeName, userId, prepTime, cookTime, cookTemp, servingAmount, servingType, deg, photo, recipeType, personalNotes ) {
-	axios.post('http://localhost:3001/recipes',{recipeName, userId, prepTime, cookTime, cookTemp, servingAmount, servingType,deg, photo, recipeType,personalNotes }).then(recipe=>{
-		console.log('from postrecipe', recipe.userId)
+export function postRecipe(recipe) {
+	axios.post('http://localhost:3001/recipes',recipe).then(resp=>{
+		// console.log('from postrecipe', userId)
 		store.dispatch({
 			type: 'POST_RECIPE',
-			recipe: recipe.data,
-			userId: recipe.data.userId,
-			prepTime: recipe.data.prepTime,
-		    cookTime: recipe.data.cookTime,
-		    cookTemp: recipe.data.cookTemp,
-		    deg: recipe.data.deg,
-		    servingAmount: recipe.data.servingAmount,
-		    servingType: recipe.data.servingType,
-		    photo: recipe.data.photo,
-		    recipeType: recipe.data.recipeType,
-		    personalNotes: recipe.data.personalNotes,
-			recipeName: recipe.data.recipeName,
+			recipe: recipe,
+			"public": recipe.public,
+		
+		    // photo: photo,
+		    // recipeType: recipeType,
+		    // personalNotes: personalNotes,
+			// recipeName: recipeName,
 
 		})
 })
@@ -91,3 +86,5 @@ export function getUsers(id) {
 // 	})
 // }
 
+
+// ,recipeName, userId, prepTime, cookTime, cookTemp, servingAmount, servingType, deg, photo, recipeType, personalNotes
