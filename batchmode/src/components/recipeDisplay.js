@@ -1,5 +1,6 @@
 import React from 'react'
 import {getRecipe} from '../api/recipe'
+import {getUsers} from '../api/recipe'
 import store from '../store'
 
 
@@ -26,7 +27,7 @@ class RecipeDisplay extends React.Component{
       })
     })
      getRecipe(this.props.match.params.recipeId)
-      // getUsers(this.props.match.params.user)
+      getUsers(this.props.match.params.user)
   }
   componentWillUnMount(){
     this.unsubscribe()

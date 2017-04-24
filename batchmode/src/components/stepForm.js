@@ -20,10 +20,10 @@ class StepForm extends Component{
     render(){
         return(
             <div>
-                <input type="text" onChange={this.Input} className="smallText" value={this.state.amount} name="amount" placeholder="amount"/> 
-                <input type="text" onChange={this.Input} value={this.state.unit} name="unit" placeholder="unit" className="smallText" />
-                <input type="text" onChange={this.Input} className="textLoaves" value={this.state.ingredients} name="ingredients" placeholder="ingredient"/>
-                <input type="text" onChange={this.Input} className="bigTextArea" name="directions" value={this.state.directions} placeholder="Directions"/>
+                <input type="text" onChange={this.Input} className="smallText" value={this.state.amount} name="amount" placeholder="Amount"/> 
+                <input type="text" onChange={this.Input} className="smallText" value={this.state.unit} name="unit" placeholder="Unit"  />
+                <input type="text" onChange={this.Input} className="textLoaves" value={this.state.ingredients} name="ingredients" placeholder="Ingredient"/>
+                <input type="text" onChange={this.Input} className="bigTextArea" value={this.state.directions} name="directions"  placeholder="Directions"/>
              </div>
         )
     }

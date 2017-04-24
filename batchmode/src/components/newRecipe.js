@@ -67,9 +67,9 @@ render() {
           <button onClick={this.handlePhoto} type="button" className="plusButton">+ Add Photo</button>
 		      <input onChange={this.handleChange} type="text" placeholder="Recipe Name" name="recipeName" value={this.state.recipeName} className="firstBloc"/>
 		      <input onChange={this.handleChange} type="text" className="firstBloc" placeholder="By" name="user" value={this.state.user} />
-    		  <input type="checkbox" id="makeItPub" name="Make it Public" />
+    		  <input type="checkbox" id="makeItPub" name="Make it Public" value={this.state.public}/>
             <label htmlFor="makeItPub">Make it Public</label>
-    		  <input type="checkbox" label="Keep it Private" id="keepItPriv" />
+    		  <input type="checkbox" label="Keep it Private" id="keepItPriv" value={this.state.public} />
             <label htmlFor="keepItPriv">Keep it Private</label>
         </div>
     	    <select onChange={this.handleChange} value={this.state.servingType} name="servingType" id="recipeTypeSelect">

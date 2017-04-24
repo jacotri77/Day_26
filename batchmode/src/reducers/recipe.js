@@ -19,13 +19,13 @@ export default function(state=initialState, action) {
 		case 'POST_RECIPE': 
 			return {...state, recipes:[...state.recipes, action.recipes]} 
 		case 'POST_INGREDIENTS':
-			return {...state, ingredients: {...action.ingredients},amount:{...action.amount}, unit: {...action.unit}}
+			return {...state, ingredients: [...state.ingredients, action.ingredients],amount:[...state.amount, action.amount], unit: [...state.unit, action.unit]}
 		case 'POST_USERS':
-			return {...state, user: {...action.user}, recipeId: {...action.recipeId}}
+			return {...state, user: [...state.user, action.user], recipeId: [...state.recipeId, action.recipeId]}
 		case 'POST_STEPS':
 			return {...state,  steps: [...state.steps, action.steps]}
 		case 'GET_RECIPE':
-			return {...state, recipe: {...action.recipe}, userId:{...action.userId}}
+			return {...state, recipe: [...state.recipe, action.recipe], userId:[...state.userId, action.userId]}
 		default:
 			return state
 	}

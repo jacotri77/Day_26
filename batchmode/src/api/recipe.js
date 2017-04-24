@@ -67,7 +67,7 @@ export function getRecipe(id, userId){
 export function getUsers(id) {
 	axios.get('http://localhost:3001/users' + id).then(user=>{
 		store.dispatch({
-			type: 'POST_USERS',
+			type: 'GET_USERS',
 			user: user.data,
 		})
 	})
@@ -85,6 +85,7 @@ export function getUsers(id) {
 // 		})
 // 	})
 // }
+
 
 
 // ,recipeName, userId, prepTime, cookTime, cookTemp, servingAmount, servingType, deg, photo, recipeType, personalNotes
