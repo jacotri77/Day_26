@@ -5,8 +5,13 @@ class Home extends Component {
     
     render(){
         return (
-            <div> this is the home page</div>
-            
+           <div> 
+                <div id="myRecipes"> My Recipes </div>
+                <div id="publicRecipes"> Public Recipes </div>
+                <div id="popularRecipes"> Popular Recipes </div>
+                <div id="myFavRecipes"> My Favorite Recipes </div>
+                <div id="myPantry"> My Pantry </div>
+            </div>
         )
     }
 }
