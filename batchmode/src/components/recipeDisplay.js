@@ -11,9 +11,13 @@ class RecipeDisplay extends React.Component{
     this.state ={
       recipe:{
         recipeName:'',
-        userId:'',
+        user:'',
+        cookTemp: '',
+        prepTime:'',
+        cookTime:''
+
       },
-     
+      
     }
     console.log('from class', this.state.recipe)
   }
@@ -23,10 +27,10 @@ class RecipeDisplay extends React.Component{
        console.log('from recDis Mount', appState)
         this.setState({
           recipe: appState.recipe,
-          userId: appState.userId        
+          user: appState.user       
       })
     })
-     getRecipe(this.props.match.params.recipeId)
+      getRecipe(this.props.match.params.recipeId)
       getUsers(this.props.match.params.user)
   }
   componentWillUnMount(){
@@ -37,23 +41,21 @@ render(){
 return(
   <div>
     <div>
-      
-        <div key={this.state.recipe.recipeName+1}>
+        <div key={this.state.recipe.id+1}>
            <h1>{this.state.recipe.recipeName}</h1>
             <h6> {this.state.recipe.user}</h6>
          </div>
-       
     </div>
     <div id="bigPicture">
       <img src="#" alt="bigPic"/>
     </div>
-      <div> Recipe Type</div>
-      <div> Prep time </div>
-      <div> Cook Time </div>
-      <div> Cook Temp </div>
+      <div> {this.state.recipe.recipeType}</div>
+      <div> Prep time{this.state.recipe.prepTime} </div>
+      <div> Cook Time {this.state.recipe.cookTime}</div>
+      <div> Cook Temp {this.state.recipe.cookTemp}</div>
       <div> Ingredient List</div>
         <ul>
-          <li> ingredient 1</li>
+          <li> ingredient 1{this.state.recipe.ingredient}</li>
           <li> ingredient 2</li>
         </ul>
     </div>

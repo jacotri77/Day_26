@@ -7,7 +7,7 @@ export function postRecipe(recipe) {
 		store.dispatch({
 			type: 'POST_RECIPE',
 			recipe: recipe,
-			"public": recipe.public,
+			public: recipe.public,
 		
 		    // photo: photo,
 		    // recipeType: recipeType,
@@ -52,13 +52,13 @@ export function postIngredients(ingredients,stepId, amount, unit) {
 	})
 }
 
-export function getRecipe(id, userId){
-	axios.get('http://localhost:3001/recipes/' + id).then(recipe=>{
-		console.log('from api',userId)
+export function getRecipe(id){
+	axios.get('http://localhost:3001/recipes' + id).then(recipe=>{
+		console.log('from api', recipe)
 		store.dispatch({
 			type:'GET_RECIPE',
 			recipe:recipe.data,
-			userId:recipe.data.userId
+			
 
 		})
 	})

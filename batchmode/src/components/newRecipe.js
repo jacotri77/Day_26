@@ -24,11 +24,11 @@ handleChange = (e) => {
   })
 }
 
-updateStep = (index,directions) => {
+updateStep = (index,directions, amount, unit) => {
   this.setState({
     steps: this.state.steps.map((step, i) => {
         if (i === index){
-            return {directions}
+            return {directions, amount, unit}
         } else {
             return step
            }
@@ -44,7 +44,10 @@ addStep = (e) =>{
 handleSubmit = (e) => {
     postRecipe(this.state)
     this.setState({
-        "recipeName": "",
+        "recipes":[{
+           "recipeName": "",
+        }
+        ],
         "user":"",
         "steps": [
           {

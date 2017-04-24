@@ -1,37 +1,17 @@
 {
   "users": [],
   "recipes": [
+    
     {
-      "recipeName": "cookies",
-      "user": "Erik Jacobsen",
+      "recipeName": "brownies of death",
+      "user": "erik",
       "steps": [
-        {
-          "directions": "mi"
-        },
-        {
-          "directions": "",
-          "amount": "",
-          "unit": "",
-          "ingredients": ""
-        }
+        {}
       ],
-      "servingType": "Breaky",
-      "deg": "F",
-      "personalNotes": "this is my favorite",
-      "id": 1
-    },
-    {
-      "recipeName": "",
-      "user": "",
-      "steps": [
-        {
-          "directions": "",
-          "amount": "",
-          "unit": "",
-          "ingredients": ""
-        }
-      ],
-      "id": 2
+      "servingType": "After Da Club",
+      "deg": "C",
+      "personalNotes": "love it",
+      "id": 3
     }
   ],
   "steps": [],
